@@ -1,3 +1,12 @@
+#
+#    A Binary Search Tree is a tree sorted s.t. a node's left child is greater and right child smaller than itself
+#         (4)
+#	    /    \
+#     (2)    (6)
+#       \    /  \
+#       (3) (5) (9)
+#
+
 class Node(object):
 	def __init__(self, data=None, left_child=None, right_child=None):
 		self.data = data
@@ -26,21 +35,3 @@ class BST(object):
 				self.search_and_insert(current_node.right_child, new_node)
 			else:
 				current_node.right_child = new_node
-
-
-def main():
-	bst = BST()
-	bst.insert(4)
-	bst.insert(3)
-	bst.insert(9)
-	bst.insert(7)
-	bst.insert(1)
-	#print(bst.root.right_child.data)
-	print(bst.root.data)
-	print(bst.root.right_child.data)
-	print(bst.root.right_child.left_child.data)
-	print(bst.root.left_child.data)
-	print(bst.root.left_child.left_child.data)
-
-
-main()
